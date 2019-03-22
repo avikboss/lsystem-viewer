@@ -3,7 +3,7 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
-        TurtleCanvas c = new TurtleCanvas();
+        TurtleCanvas canvas = new TurtleCanvas();
 
     }
 }
