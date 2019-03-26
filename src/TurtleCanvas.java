@@ -44,6 +44,15 @@ public class TurtleCanvas extends JPanel implements MouseListener {
                 turtle.setHeading(turtle.getHeading()+l.getAngle());
             } else if (c == '-') {
                 turtle.setHeading(turtle.getHeading()-l.getAngle());
+            } else if (c == '[') {
+                turtle.getStateStack().push(new TurtleState(turtle.getX(),turtle.getY(),turtle.getHeading()));
+            } else if (c == ']') {
+                TurtleState state = turtle.getStateStack().pop();
+                turtle.setX(state.getX());
+                turtle.setY(state.getY());
+                turtle.setHeading(state.getHeading());
+            } else if (c == 'X' || c== 'Y') {
+                //do nothing
             } else {
                 double x0 = turtle.getX();
                 double y0 = turtle.getY();
