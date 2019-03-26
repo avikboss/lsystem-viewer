@@ -1,9 +1,12 @@
+import java.util.ArrayDeque;
+
 public class Turtle {
 
     private TurtleCanvas canvas;
     private double x;
     private double y;
     private double heading;
+    private ArrayDeque<TurtleState> stateStack;
     private LSystem lSystem;
 
     public Turtle(TurtleCanvas canvas,double x, double y) {
@@ -12,6 +15,7 @@ public class Turtle {
         this.x = x;
         this.y = y;
         this.lSystem = new LSystem();
+        this.stateStack = new ArrayDeque<>();
     }
 
     public void move(double dist, double angle) {
@@ -57,5 +61,9 @@ public class Turtle {
 
     public void setlSystem(LSystem lSystem) {
         this.lSystem = lSystem;
+    }
+
+    public ArrayDeque<TurtleState> getStateStack() {
+        return stateStack;
     }
 }
