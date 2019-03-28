@@ -21,7 +21,7 @@ public class TurtleCanvas extends JPanel implements MouseListener {
         mainPanel.setPreferredSize(new Dimension(500,600));
         mainPanel.setLayout(new FlowLayout());
         mainPanel.add(this);
-        mainPanel.add(new Label("dist;angle;iter;axiom;a:x"));
+        mainPanel.add(new Label("dist;angle;iter;axiom;a=x"));
         mainPanel.add(input);
 
 

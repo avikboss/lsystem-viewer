@@ -92,7 +92,7 @@ public class LSystem {
         system.setAxiom(split[3]);
 
         for (int i = 4;i<split.length;i++) {
-            String[] rule = split[i].split(":");
+            String[] rule = split[i].split("=");
             rules.put(rule[0].charAt(0),rule[1]);
         }
         system.setRules(rules);
